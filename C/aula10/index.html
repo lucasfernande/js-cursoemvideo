@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #area {
+            background-color: gray;
+            color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type=number] {
+            width: 75px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 5px;
+            background-color: rgb(88, 19, 88);
+            color: white;
+            padding: 10px;
+            border: 1px solid purple;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: purple;
+            transition: .5s;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="area">Interaja...</div>
+    <hr>
+    <h1>Somando</h1>
+    <input type="number" id="n1">
+    +
+    <input type="number" id="n2">
+    =
+    <output name="res" id="res"></output>
+    <br>
+    <button id="btnSomar">Somar</button>
+
+
+    <script>
+        var area = document.querySelector('#area')
+        area.addEventListener('click', click)
+        area.addEventListener('mouseenter', enter)
+        area.addEventListener('mouseout', out)
+        
+        function click() {
+            area.innerText = 'Clicou!'
+            area.style.backgroundColor = 'green'
+        }
+
+        function enter() {
+            area.innerText = 'Entrou!'
+            area.style.backgroundColor = 'red'
+        }
+
+        function out() {
+            area.innerText = 'Saiu!'
+            area.style.backgroundColor = 'lightblue'
+        }
+
+        var btnSomar = document.querySelector('#btnSomar')
+        btnSomar.addEventListener('click', somar)
+
+        function somar() {
+            var n1 = Number(document.querySelector('#n1').value)
+            var n2 = Number(document.querySelector('#n2').value)
+            var res = document.querySelector('#res')
+            res.innerText = n1 + n2
+        }
+    </script>
+</body>
+ 
+</html>
