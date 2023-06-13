@@ -11,6 +11,10 @@ body {
     text-align: center;
 }
 
+body > h1 {
+    padding: 15px 0;
+}
+
 main {
     margin: 0 auto;
     max-width: 750px;
