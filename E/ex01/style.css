@@ -1,0 +1,49 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgreen;
+    color: white;
+}
+
+header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    background-color: white;
+    color: black;
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+main input {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#btnContar {
+    border: 1px solid darkgreen;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+#btnContar:active {
+    background-color: darkgreen;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
