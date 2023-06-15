@@ -1,19 +1,31 @@
+function numInvalido(n) {
+    if (Number(n) < 1 || Number(n) > 100) {
+        return true
+    }
+    return false
+}
+
+function numExiste(n, lista) {
+    if (lista.indexOf(Number(n)) != -1) {
+        return true
+    }
+    return false
+}
+
 function adicionar() {
     let n = document.querySelector('#n').value
 
     if (n.length == 0) {
         alert('ERRO: preencha o campo número!')
-    } else if (Number(n) < 1 || Number(n) > 100) {
-        alert('ERRO: digite um número entre 1 e 100')
-    } else if (numeros.indexOf(Number(n)) != -1) {
-        alert(`ERRO: o valor ${n} já foi cadastrado!`)
+    } else if (numInvalido(n) || numExiste(n, numeros)) {
+        alert('ERRO: número inválido ou já existente!')
     } else {
         n = Number(n)
         numeros.push(n)
 
         let res = document.querySelector('#res')
         res.innerHTML = ''
-        
+
         let nums = document.querySelector('#nums')
         
         option = document.createElement('option')
