@@ -1,0 +1,33 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+body {
+    background-color: rgb(226, 226, 70);
+}
+
+main {
+    background-color: white;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+main > div:nth-child(2) > p {
+    margin: 10px 0;
+}
+
+input {
+    padding: 2px 5px;
+}
+
